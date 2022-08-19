@@ -1,0 +1,1 @@
+"permissions": "activeTab", "tabs"  , webNavigation
