@@ -1,15 +1,28 @@
 {
     "manifest_version": 2,
-    "name": "RaterFox",
+    "name": "test",
     "description": "Watch new TV series on Netflix",
     "version": "1",
     "author": "Jake Prins",
-    "browser_action": {
-    "default_icon": "tab-icon.png",
-    "default_title": "Have a good day"
+
+  "browser_action": {
+
+    "default_popup": "newtab.html",
+    "default_title": "Open the popup"
+  },
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "webNavigation",
+      "scripting",
+      "bookmarks",
+      "cookies"
+    ],
+    "background": {
+      "service_worker": "background.js"
     },
-    "chrome_url_overrides" : {
-    "newtab": "newtab.html"
-    },
-    "permissions": ["activeTab"] 
+    "options_page": "options.html",
+    "omnibox": { "keyword" : "nt" }
+
+ 
     }
